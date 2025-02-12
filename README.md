@@ -35,7 +35,7 @@ The **Ubuntu attacker VM** is installed and configured.
 ## Step 3: Setting Up the Network
 
 ###  **Network Configuration**
-To allow seamless communication between the **attacker (Ubuntu VM)** and **victim (Windows VM)**, we configure a **custom subnet**.
+To allow seamless communication between the **attacker (Ubuntu VM)** and **victim (Windows VM)**, we configure a **custom subnet**. (These are the IPs from my VMs and not the standard ones)
 
 | **Component**         | **IP Address**         |
 |----------------------|----------------------|
