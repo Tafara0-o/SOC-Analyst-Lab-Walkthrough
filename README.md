@@ -32,13 +32,6 @@ The **Ubuntu attacker VM** is installed and configured.
 
 ---
 
-# SOC Analyst Lab Walkthrough
-
-## Overview
-This walkthrough follows **Eric Capuano's** "So You Want to Be a SOC Analyst" lab, using **Gerard Auger's** video guide and Eric Capuano's Substack instructions. The goal of this lab is to build a **SOC (Security Operations Center) environment** for threat detection and analysis using **Sysmon, Lima Charlie, and Sliver**.
-
----
-
 ## Step 3: Setting Up the Network
 
 ###  **Network Configuration**
