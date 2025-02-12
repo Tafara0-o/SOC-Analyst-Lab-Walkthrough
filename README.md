@@ -29,3 +29,33 @@ The **Ubuntu attacker VM** is installed and configured.
 5. Update the system:
    ```bash
    sudo apt update && sudo apt upgrade -y
+
+---
+
+# SOC Analyst Lab Walkthrough
+
+## Overview
+This walkthrough follows **Eric Capuano's** "So You Want to Be a SOC Analyst" lab, using **Gerard Auger's** video guide and Eric Capuano's Substack instructions. The goal of this lab is to build a **SOC (Security Operations Center) environment** for threat detection and analysis using **Sysmon, Lima Charlie, and Sliver**.
+
+---
+
+## Step 3: Setting Up the Network
+
+###  **Network Configuration**
+To allow seamless communication between the **attacker (Ubuntu VM)** and **victim (Windows VM)**, we configure a **custom subnet**.
+
+| **Component**         | **IP Address**         |
+|----------------------|----------------------|
+| **Subnet IP**       | `192.168.20.0/24`    |
+| **Gateway IP**      | `192.168.20.2`       |
+| **Linux Attacker VM** | `192.168.20.12`     |
+| **Windows Victim VM** | `192.168.20.10`     |
+
+---
+
+###  **Configuring Network on Ubuntu**
+We manually assign the **Ubuntu Attacker VM** a **static IP**.
+
+#### **1️ Open the Network Configuration File**
+```bash
+sudo nano /etc/netplan/00-installer-config.yaml
