@@ -1,4 +1,4 @@
-# SOC-Analyst-Lab-Walkthrough
+# SOC-Analyst-Lab-Walkthrough Part 1
 
 ## Overview
 This is a step-by-step walkthrough of the **"So You Want to Be a SOC Analyst"** lab by **Eric Capuano**, following **Gerard Auger's** video and Eric Capuano's Substack guide. The goal of this lab is to build a **SOC (Security Operations Center) environment** for threat detection and analysis using **Sysmon, Lima Charlie, and Sliver**.
