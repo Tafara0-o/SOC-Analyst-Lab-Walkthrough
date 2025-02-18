@@ -27,7 +27,7 @@ The **Ubuntu attacker VM** is installed and configured.
    - **14GB Storage**
 4. Install Ubuntu with default settings.
 5. Update the system:
-   ```bash
+   ```
    sudo apt update && sudo apt upgrade -y
 
 ---
@@ -50,7 +50,7 @@ To allow seamless communication between the **attacker (Ubuntu VM)** and **victi
 We manually assign the **Ubuntu Attacker VM** a **static IP**.
 
 #### **1. Open the Network Configuration File**
-```bash
+```
 sudo nano /etc/netplan/00-installer-config.yaml
 
 Modify the network configuration file:
@@ -59,7 +59,7 @@ Modify the network configuration file:
 ```
 Modify the network configuration file:
 
-```yaml
+```
 network:
   ethernets:
     ens33:
@@ -75,9 +75,6 @@ network:
 
 Apply the changes:
 
-bash
-
-Copy
 
 ```
 sudo netplan apply
@@ -92,9 +89,7 @@ Verify network connectivity between the machines.
 
 ### Ping the Windows Victim Machine from Ubuntu:
 
-bash
 
-Copy
 
 ```
 ping 192.168.20.10
@@ -103,9 +98,7 @@ ping 192.168.20.10
 
 ### Ping the Gateway:
 
-bash
 
-Copy
 
 ```
 ping 192.168.20.2
@@ -114,13 +107,13 @@ ping 192.168.20.2
 
 ----------
 
-## Step 5: Installing Windows 10 Evaluation VM (Victim)
+## Step 5: Installing Windows 11 Evaluation VM (Victim)
 
-The **Windows 10 Evaluation VM** is set up as the **victim machine**, where we will install security monitoring tools.
+The **Windows 11 Evaluation VM** is set up as the **victim machine**, where we will install security monitoring tools. There's a hiccup here because the exact version required by the walkthrough isn't available for download from microsoft anymore. However, earlier versions suffice and can be found all over the internet (At your own discretion).
 
 ### Installation Steps:
 
-1.  **Download** the **Windows 10 Evaluation ISO** from [Microsoft](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-10-enterprise).
+1.  **Download** the **Windows 11 Evaluation ISO** from [Microsoft](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-10-enterprise).
 2.  **Install Windows** using default settings.
 3.  **Configure a Static IP** (`192.168.20.10`).
 4.  **Disable Windows Updates** to prevent interference.
