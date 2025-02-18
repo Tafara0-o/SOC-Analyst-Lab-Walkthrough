@@ -126,9 +126,7 @@ To prevent interference with our tools, we disable **Windows Defender** and unne
 
 ### Disable Windows Defender via PowerShell:
 
-powershell
 
-Copy
 
 ```
 Set-MpPreference -DisableRealtimeMonitoring $true
@@ -138,10 +136,6 @@ Set-MpPreference -DisableBlockAtFirstSeen $true
 ```
 
 ### Disable Windows Update & Firewall:
-
-powershell
-
-Copy
 
 ```
 Stop-Service wuauserv
@@ -160,9 +154,6 @@ Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled False
 
 1.  **Download Sysmon:**
 
-powershell
-
-Copy
 
 ```
 Invoke-WebRequest -Uri "https://download.sysinternals.com/files/Sysmon.zip" -OutFile "$env:TEMP\Sysmon.zip"
@@ -171,9 +162,6 @@ Invoke-WebRequest -Uri "https://download.sysinternals.com/files/Sysmon.zip" -Out
 
 2.  **Extract and Install:**
 
-powershell
-
-Copy
 
 ```
 Expand-Archive -Path "$env:TEMP\Sysmon.zip" -DestinationPath "$env:TEMP\Sysmon"
@@ -184,9 +172,6 @@ cd "$env:TEMP\Sysmon"
 
 3.  **Verify Installation:**
 
-powershell
-
-Copy
 
 ```
 Get-Service Sysmon
@@ -226,9 +211,6 @@ The **attack system** is configured, and **Sliver**, a **C2 (Command & Control) 
 
 ### Installing Sliver on Ubuntu
 
-bash
-
-Copy
 
 ```
 curl https://sliver.sh/install | sudo bash
@@ -237,9 +219,6 @@ curl https://sliver.sh/install | sudo bash
 
 ### Running Sliver
 
-bash
-
-Copy
 
 ```
 sliver-server
